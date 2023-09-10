@@ -1,3 +1,5 @@
+import { Provider } from 'react-redux';
+import store from './store';
 import Posts from './components/Posts';
 import PostForm from './components/PostForm';
 
@@ -6,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +21,7 @@ function App() {
         <hr />
         <Posts />
       </div>
-    </>
+    </Provider>
 
   );
 }
